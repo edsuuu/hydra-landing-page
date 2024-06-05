@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 export const Navbar = styled.nav`
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    margin-top: 2rem;
-    width: 100vw;
-    border: 1px solid black;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    border: 1px solid black;
     gap: 10px;
+    padding: 1.8rem 2rem;
 `;
 
 export const Logo = styled.div`
@@ -17,7 +17,6 @@ export const Logo = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    border: 1px solid white;
 `;
 export const LogoImg = styled.div`
     display: flex;
@@ -56,6 +55,7 @@ export const ParamsLink = styled(Link)`
     font-family: 'Montserrat', sans-serif;
     &:hover {
         cursor: pointer;
+        text-decoration: underline;
     }
     `;
 

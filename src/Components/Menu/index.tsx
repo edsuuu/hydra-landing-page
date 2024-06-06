@@ -30,8 +30,8 @@ const Menu = () => {
                 <ParamsLink to="#">How To</ParamsLink>
             </Links>
             <Buttons>
-                <Button text="Contact"></Button>
-                <Button text="Join Hydra"></Button>
+                <Button primary={true} text="Contact"></Button>
+                <Button primary={false}text="Join Hydra"></Button>
             </Buttons>
         </Navbar>
     );

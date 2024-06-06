@@ -38,7 +38,7 @@ export const Texts = styled.div`
         p {
             text-align: start;
             max-width: 450px;
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 1rem;
         }
         button {
@@ -47,6 +47,7 @@ export const Texts = styled.div`
     }
     div:nth-child(2) {
         button {
+            margin-top: 50px;
             width: 220px;
         }
     }
@@ -74,6 +75,7 @@ export const Texts = styled.div`
             display: flex;
             justify-content: center;
             button {
+                margin-top: 20px;
                 margin-left: 4rem;
                 margin-right: 4rem;
                 width: 100%;
@@ -90,7 +92,7 @@ export const Texts = styled.div`
                 }
             }
             p {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
                 padding: 0 1rem;
             }
         }

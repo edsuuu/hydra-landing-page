@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    margin-top: 80px;
     border: 1px solid white;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 50px;
 `;
-
 
 export const IntroductionTitle = styled.div`
     display: flex;
@@ -36,9 +36,7 @@ export const IntroductionAbout = styled.div`
     flex-direction: row;
 `;
 
-
 export const Buttons = styled.div`
-
     button {
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
@@ -48,14 +46,12 @@ export const Buttons = styled.div`
         padding: 1rem 2rem;
         border-radius: 50px;
         cursor: pointer;
-
     }
 
-
-    button:nth-child(1){
+    button:nth-child(1) {
         border: none;
-        color: #302C42;
-        background: linear-gradient(to right, #8176AF, #C0B7E8);
+        color: #302c42;
+        background: linear-gradient(to right, #8176af, #c0b7e8);
         transition: 0.3s ease-in;
 
         &:hover {

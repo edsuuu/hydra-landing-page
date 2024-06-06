@@ -64,7 +64,6 @@ const Home: React.FC = () => {
             </ConteudoMain>
 
             <ContactPageHome />
-
         </Container>
     );
 };

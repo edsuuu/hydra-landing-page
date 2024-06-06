@@ -4,6 +4,7 @@ import education from '../../assets/education.png';
 import selfCare from '../../assets/selfcare.png';
 import outdoor from '../../assets/outdoor.png';
 import arrowLong from '../../assets/arrow-from-right-long.svg';
+import Button from '../../Components/Button';
 
 export default function WhyBuild() {
     const card = [
@@ -66,7 +67,8 @@ export default function WhyBuild() {
                         <img src={item.image} alt={item.imageAlt} />
                         <h3>{item.name}</h3>
                         <p>{item.paragraph}</p>
-                        <button>{item.buttonText}</button>
+
+                        <Button text={item.buttonText}></Button>
                     </div>
                 ))}
             </Card>

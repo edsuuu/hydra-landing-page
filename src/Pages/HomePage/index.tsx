@@ -12,11 +12,11 @@ export default function HomePage() {
         <Container>
             <Home />
             <Introduction />
-            <WhyBuild />
-            <Technologies />
-            <HowWeBuild />
-            <Form />
-            <Footer />
+            {/* <WhyBuild /> */}
+            {/* <Technologies /> */}
+            {/* <HowWeBuild /> */}
+            {/* <Form /> */}
+            {/* <Footer /> */}
         </Container>
     );
 }

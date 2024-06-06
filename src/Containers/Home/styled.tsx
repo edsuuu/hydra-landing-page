@@ -1,40 +1,52 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border: 1px solid #000000;
-    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00e73a;
+`;
+
+export const ConteudoMain = styled.div`
+    border: 1px solid #00f3f3;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+`;
+
+export const Texts = styled.div`
+    max-width: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-`;
+    justify-content: space-evenly;
+    color: white;
 
-export const ContainerImage = styled.div`
-    img {
-        border-end-start-radius: 54%;
-        border-end-end-radius: 20%;
-        border-start-start-radius: 20%;
-        border-start-end-radius: 20%;
+    div:nth-child(1) {
+        h1 {
+            font-weight: bold;
+            font-size: 2.7rem;
+        }
+        p {
+            max-width: 450px;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+    }
+    div:nth-child(2) {
+        button {
+            margin-left: 4rem;
+            width: 200px;
+        }
     }
 `;
 
-export const IntroductionSectionHome = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-`;
-
-export const IntroductionContactHome = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    background: radial-gradient(circle, #3a3456, #211e2e);
-    border-radius: 5rem;
-`;
-
-export const BoxIntroductionContactHome = styled.div`
-    display: flex;
-    flex-direction: row;
+export const ImageCover = styled.div`
+    border: 1px solid #00f3f3;
+    img {
+        min-width: 300px;
+        width: 100%;
+    }
 `;

@@ -1,68 +1,71 @@
-import { ContainerImage, IntroductionSectionHome, IntroductionContactHome, BoxIntroductionContactHome } from './styled';
-import vrImage from '../../assets/vr-img-1.png';
-import location from '../../assets/location.svg';
-import phoneCall from '../../assets/phone.svg';
-import emailImg from '../../assets/mail.svg';
-import arrowImg from '../../assets/arrow-from-right.svg';
+import { Container, ConteudoMain, Texts, ImageCover } from './styled';
+import CoverImage from '../../Components/CoverImage';
+import imgHomePage from '../../assets/vr-img-1.png';
+import TitleHome from '../../Components/TitleHome';
+import Button from '../../Components/Button';
+import ContactPageHome from '../../Components/ContactHome';
 
-export default function Home() {
-    return (
-        <>
-            <IntroductionSectionHome>
-                <div>
-                    <div>
-                        <h1>
-                            <span>Dive</span> Into The Depths
-                        </h1>
-                        <h1>
-                            Of <span>Virtual Reality</span>
-                        </h1>
-                    </div>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .</p>
-                    </div>
-                    <div>
-                        <button>Get Started</button>
-                        <div>
-                            <img src={arrowImg} alt="arrowImg" />
-                        </div>
-                    </div>
-                </div>
-                <ContainerImage>
-                    <img src={vrImage} alt="vrImage" />
-                </ContainerImage>
-            </IntroductionSectionHome>
-
-            <IntroductionContactHome>
-                <BoxIntroductionContactHome>
-                    <div>
-                         <img src={phoneCall} alt="phoneCall" />
-                    </div>
-                    <div>
-                        <h1>Pay Us a Visit</h1>
-                        <p>Union St, Seattle, WA 98101, United States</p>
-                    </div>
-                </BoxIntroductionContactHome>
-                <BoxIntroductionContactHome>
-                    <div>
-                        <img src={location} alt="location" />
-                    </div>
-                    <div>
-                        <h1>Pay Us a Visit</h1>
-                        <p>(110) 1111-1010</p>
-                    </div>
-                </BoxIntroductionContactHome>
-                <BoxIntroductionContactHome>
-                    <div>
-                        <img src={emailImg} alt="emailImg" />
-                    </div>
-                    <div>
-                        <h1>Pay Us a Visit</h1>
-                        <p>Union St, Seattle, WA 98101, United States</p>
-                    </div>
-                </BoxIntroductionContactHome>
-            </IntroductionContactHome>
-
-        </>
-    );
+interface ImageProps {
+    id: number;
+    imageName: string;
+    url: string;
 }
+
+interface TitleProps {
+    primaryTitleText: string;
+    primaryColorText: string;
+    secondaryTitleText: string;
+    secondaryColorText: string;
+    paragraphText: string;
+}
+
+const images: ImageProps[] = [
+    {
+        id: 1,
+        imageName: 'vrImage',
+        url: imgHomePage,
+    },
+];
+
+const titleObj: TitleProps[] = [
+    {
+        primaryColorText: 'Dive',
+        primaryTitleText: 'Into The Depths',
+        secondaryTitleText: 'Of',
+        secondaryColorText: 'Virtual Reality',
+        paragraphText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae',
+    },
+];
+
+const Home: React.FC = () => {
+    const firstImage: ImageProps = images[0];
+    const title: TitleProps = titleObj[0];
+
+    return (
+        <Container>
+            <ConteudoMain>
+                <Texts>
+                    <div>
+                        <TitleHome
+                            primaryTitleText={title.primaryTitleText}
+                            primaryColorText={title.primaryColorText}
+                            secondaryTitleText={title.secondaryTitleText}
+                            secondaryColorText={title.secondaryColorText}
+                            paragraphText={title.paragraphText}
+                        />
+                    </div>
+                    <div>
+                        <Button primary={false} text="BUILD YOUR WORLD"></Button>
+                    </div>
+                </Texts>
+                <ImageCover>
+                    <CoverImage url={firstImage.url} alt={firstImage.imageName} />
+                </ImageCover>
+            </ConteudoMain>
+
+            <ContactPageHome />
+        </Container>
+    );
+};
+
+export default Home;

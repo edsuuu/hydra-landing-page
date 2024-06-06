@@ -6,4 +6,8 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 520px) {
+        padding: 1rem;
+    }
 `;

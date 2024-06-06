@@ -8,6 +8,9 @@ export const Navbar = styled.nav`
     border: 1px solid black;
     gap: 10px;
     padding: 1.8rem 2rem;
+    @media (max-width: 1000px) {
+        flex-wrap: wrap;
+    }
 `;
 
 export const Logo = styled.div`
@@ -23,7 +26,6 @@ export const LogoImg = styled.div`
     justify-content: center;
     align-items: center;
     img {
-        width: 100%;
     }
 `;
 
@@ -44,6 +46,9 @@ export const Links = styled.div`
     justify-content: space-evenly;
     align-items: center;
     gap: 3rem;
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `;
 
 export const ParamsLink = styled(Link)`
@@ -64,4 +69,7 @@ export const Buttons = styled.div`
     align-items: center;
     gap: 2rem;
 
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `;

@@ -1,5 +1,5 @@
 import { ContainerImage, IntroductionSectionHome, IntroductionContactHome, BoxIntroductionContactHome } from './styled';
-import vrImage from '../../assets/vr-main.svg';
+import vrImage from '../../assets/vr-img-1.png';
 import location from '../../assets/location.svg';
 import phoneCall from '../../assets/phone.svg';
 import emailImg from '../../assets/mail.svg';

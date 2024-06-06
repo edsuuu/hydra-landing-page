@@ -1,6 +1,6 @@
 import { Container, IntroductionAbout, IntroductionTitle, Title, Buttons } from './styled';
 import arrowLong from '../../assets/arrow-from-right-long.svg';
-import vrImg2 from '../../assets/vr-img-2.svg';
+import vrImg2 from '../../assets/vr-img-2.png';
 import Button from '../../Components/Button';
 
 export default function Introduction() {

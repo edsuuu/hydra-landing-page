@@ -1,5 +1,8 @@
 import Home from '../../Containers/Home'
+import HowWeBuild from '../../Containers/HowWeBuild';
 import Introduction from '../../Containers/Introduction'
+import Technologies from '../../Containers/Technologies';
+import WhyBuild from '../../Containers/WhyBuild';
 import { Container } from './styled';
 
 
@@ -8,6 +11,9 @@ export default function HomePage() {
         <Container>
             <Home />
             <Introduction />
+            <WhyBuild />
+            <Technologies />
+            <HowWeBuild />
         </Container>
     );
 }

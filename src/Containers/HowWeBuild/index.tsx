@@ -1,34 +1,45 @@
-import { Container, Title, CardContainer } from './styled';
-import arrowLong from '../../assets/arrow-from-right-long.svg';
+import { Container, CardContainer } from './styled';
+import arrowLong from '../../assets/arrow-from-right-long.png';
 import arrow from '../../assets/arrow-from-right.svg';
+import TitleComponent from '../../Components/TitleComponent';
+
+interface cardProps {
+    id: number;
+    title: string;
+    textOne: string;
+    textTwo: string;
+}
+
+interface TitleProps {
+    title: string;
+    subTitle: string;
+    imgArrow: string;
+    paragraph: string;
+}
+
+const cardBuild: cardProps[] = [
+    { id: 1, title: '01', textOne: '3D Conception', textTwo: '& Design' },
+    { id: 2, title: '02', textOne: 'Interaction', textTwo: 'Design' },
+    { id: 3, title: '03', textOne: 'VR World', textTwo: 'User Testing' },
+    { id: 4, title: '04', textOne: 'Hydra VR', textTwo: 'Deploy' },
+];
+
+const titleObj: TitleProps[] = [
+    {
+        title: 'HOW WE BUILD',
+        subTitle: 'WITH HYDRA VR?',
+        imgArrow: arrowLong,
+        paragraph:
+            'Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdietmassa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.',
+    },
+];
 
 export default function HowWeBuild() {
-    const cardBuild = [
-        { id: 1, title: '01', textOne: '3D Conception', textTwo: '& Design' },
-        { id: 2, title: '02', textOne: 'Interaction', textTwo: 'Design' },
-        { id: 3, title: '03', textOne: 'VR World', textTwo: 'User Testing' },
-        { id: 4, title: '04', textOne: 'Hydra VR', textTwo: 'Deploy' },
-    ];
+    const title: TitleProps = titleObj[0];
 
     return (
         <Container>
-            <Title>
-                <div>
-                    <div>
-                        <h1>INTRODUCTION </h1>
-                    </div>
-                    <div>
-                        <p>TO HYDRA VR</p>
-                        <img src={arrowLong} alt="arrowLong" />
-                    </div>
-                </div>
-                <div>
-                    <p>
-                        Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet
-                        massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
-                    </p>
-                </div>
-            </Title>
+            <TitleComponent title={title.title} subTitle={title.subTitle} paragraph={title.paragraph} imgArrow={title.imgArrow} />
             <CardContainer>
                 {cardBuild.map((item) => (
                     <div key={item.id}>
@@ -43,10 +54,8 @@ export default function HowWeBuild() {
                                 <p>{item.textOne}</p>
                                 <p>{item.textTwo}</p>
                             </div>
-
                         </div>
                     </div>
-                    // <CardBuild key={item.id} title={item.title} text={item.text} />
                 ))}
             </CardContainer>
         </Container>

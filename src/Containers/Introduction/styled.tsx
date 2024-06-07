@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     margin-top: 80px;
-    border: 1px solid white;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -23,7 +22,6 @@ export const Title = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: #07bcc9;
         p {
             width: 100%;
             display: flex;
@@ -31,9 +29,46 @@ export const Title = styled.div`
     }
 `;
 
+export const AboutTitle = styled.div`
+    padding-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 50%;
+    div:nth-child(1) {
+        h1 {
+            font-size: 3rem;
+        }
+        .subTitle {
+            font-weight: 200;
+            margin-top: 0.5rem;
+            font-size: 1.6rem;
+        }
+        p {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.5rem;
+        }
+    }
+    div:nth-child(2) {
+        margin-top: 2rem;
+        button {
+            width: 200px;
+        }
+    }
+`;
+
 export const IntroductionAbout = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    div:nth-child(1) {
+        img {
+            margin: 0px 20px;
+            max-width: 480px;
+            width: 100%;
+            border-radius: 45% 15%;
+        }
+    }
 `;
 
 export const Buttons = styled.div`

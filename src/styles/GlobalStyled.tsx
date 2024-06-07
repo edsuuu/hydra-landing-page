@@ -5,6 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 
 
 * {
+    font-family: 'Montserrat', sans-serif;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,5 +27,4 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 `;

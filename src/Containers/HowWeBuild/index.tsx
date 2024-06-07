@@ -1,14 +1,22 @@
 import { Container, CardContainer } from './styled';
 import arrowLong from '../../assets/arrow-from-right-long.png';
-import arrow from '../../assets/arrow-from-right.svg';
+import arrow from '../../assets/arrow-little.png';
 import TitleComponent from '../../Components/TitleComponent';
-import { CardProps, TitleProps } from '../../utils/interfaces';
+import { CardProps, CoverProps, TitleProps } from '../../utils/interfaces';
+import HowWeCircleComponent from '../../Components/HowWeCircleComponent';
+
+const imageObj: CoverProps[] = [
+    {
+        url: arrow,
+        alt: 'arrow',
+    },
+];
 
 const cardBuild: CardProps[] = [
-    { id: 1, title: '01', textOne: '3D Conception', textTwo: '& Design' },
-    { id: 2, title: '02', textOne: 'Interaction', textTwo: 'Design' },
-    { id: 3, title: '03', textOne: 'VR World', textTwo: 'User Testing' },
-    { id: 4, title: '04', textOne: 'Hydra VR', textTwo: 'Deploy' },
+    { title: '01', textOne: '3D Conception', textTwo: '& Design' },
+    { title: '02', textOne: 'Interaction', textTwo: 'Design' },
+    { title: '03', textOne: 'VR World', textTwo: 'User Testing' },
+    { title: '04', textOne: 'Hydra VR', textTwo: 'Deploy' },
 ];
 
 const titleObj: TitleProps[] = [
@@ -21,28 +29,16 @@ const titleObj: TitleProps[] = [
     },
 ];
 
-export default function HowWeBuild() {
+export default function HowWeBuild(): JSX.Element {
     const title: TitleProps = titleObj[0];
+    const arrow: CoverProps = imageObj[0];
 
     return (
         <Container>
             <TitleComponent title={title.title} subTitle={title.subTitle} paragraph={title.paragraph} imgArrow={title.imgArrow} />
             <CardContainer>
-                {cardBuild.map((item) => (
-                    <div key={item.id}>
-                        <div className="circle">
-                            <h1>{item.title}</h1>
-                        </div>
-                        <div>
-                            <div>
-                                <img src={arrow} alt="arrow" />
-                            </div>
-                            <div>
-                                <p>{item.textOne}</p>
-                                <p>{item.textTwo}</p>
-                            </div>
-                        </div>
-                    </div>
+                {cardBuild.map((item, index) => (
+                    <HowWeCircleComponent key={index} title={item.title} textOne={item.textOne} textTwo={item.textTwo} url={arrow.url} alt={arrow.alt} />
                 ))}
             </CardContainer>
         </Container>

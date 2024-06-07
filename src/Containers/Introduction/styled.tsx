@@ -69,6 +69,10 @@ export const IntroductionAbout = styled.div`
             border-radius: 45% 15%;
         }
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export const Buttons = styled.div`

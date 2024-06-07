@@ -41,7 +41,6 @@ export default function Introduction() {
     return (
         <Container>
             <TitleComponent title={title.title} subTitle={title.subTitle} imgArrow={title.imgArrow} paragraph={title.paragraph} />
-
             <IntroductionAbout>
                 <div>
                     <CoverImage url={image.url} alt={image.alt} />

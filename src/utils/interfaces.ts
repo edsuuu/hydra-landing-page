@@ -30,11 +30,25 @@ export interface HomeProps {
     paragraphText: string;
 }
 
-
-
 export interface CardProps {
-    id: number;
     title: string;
     textOne: string;
     textTwo: string;
+}
+
+export interface WhyBuildProps {
+    title: string;
+    paragraph: string;
+    image: string;
+    imageAlt: string;
+}
+
+export interface WhyBuildImageProps {
+    url2: string;
+    alt2: string;
+}
+
+export interface LineObjProps {
+    url: string,
+    alt: string
 }

@@ -6,6 +6,13 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     gap: 8rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`;
+
+export const Left = styled.div`
 `;
 
 export const SectionOne = styled.div`

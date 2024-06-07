@@ -1,12 +1,6 @@
 import React from 'react';
 import { Container, SectionOne, SectionTwo } from './styled';
-
-interface TitleProps {
-    title: string;
-    subTitle: string;
-    imgArrow: string;
-    paragraph: string;
-}
+import { TitleProps } from '../../utils/interfaces';
 
 const TitleComponent: React.FC<TitleProps> = ({ title, subTitle, imgArrow, paragraph }) => {
     return (

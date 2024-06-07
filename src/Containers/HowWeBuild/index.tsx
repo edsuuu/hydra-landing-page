@@ -2,22 +2,9 @@ import { Container, CardContainer } from './styled';
 import arrowLong from '../../assets/arrow-from-right-long.png';
 import arrow from '../../assets/arrow-from-right.svg';
 import TitleComponent from '../../Components/TitleComponent';
+import { CardProps, TitleProps } from '../../utils/interfaces';
 
-interface cardProps {
-    id: number;
-    title: string;
-    textOne: string;
-    textTwo: string;
-}
-
-interface TitleProps {
-    title: string;
-    subTitle: string;
-    imgArrow: string;
-    paragraph: string;
-}
-
-const cardBuild: cardProps[] = [
+const cardBuild: CardProps[] = [
     { id: 1, title: '01', textOne: '3D Conception', textTwo: '& Design' },
     { id: 2, title: '02', textOne: 'Interaction', textTwo: 'Design' },
     { id: 3, title: '03', textOne: 'VR World', textTwo: 'User Testing' },

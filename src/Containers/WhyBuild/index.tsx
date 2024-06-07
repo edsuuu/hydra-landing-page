@@ -5,14 +5,8 @@ import selfCare from '../../assets/selfcare.png';
 import outdoor from '../../assets/outdoor.png';
 import arrowLong from '../../assets/arrow-from-right-long.png';
 import TitleComponent from '../../Components/TitleComponent';
+import { TitleProps } from '../../utils/interfaces';
 // import Button from '../../Components/Button';
-
-interface TitleProps {
-    title: string;
-    subTitle: string;
-    imgArrow: string;
-    paragraph: string;
-}
 
 const card = [
     {

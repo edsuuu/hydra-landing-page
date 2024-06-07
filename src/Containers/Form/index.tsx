@@ -32,7 +32,7 @@ export default function Form() {
                         </textarea>
                     </div>
                     <Buttons>
-                        <Button text="SEND TO HYDRA " />
+                        <Button primary={true} text="SEND TO HYDRA " />
                     </Buttons>
                 </form>
             </div>

@@ -1,13 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-interface TitleProps {
-    primaryTitleText: string;
-    primaryColorText: string;
-    secondaryTitleText: string;
-    secondaryColorText: string;
-    paragraphText: string;
-}
+import { HomeProps } from '../../utils/interfaces';
 
 const SpanText = styled.span<{ $primary: boolean }>`
     background: ${(props) => (props.$primary ? 'linear-gradient(to bottom, #C0B7E8, #8176AF)' : 'linear-gradient(to bottom, #C0B7E8, #8176AF)')};
@@ -15,7 +8,7 @@ const SpanText = styled.span<{ $primary: boolean }>`
     background-clip: text;
 `;
 
-const TitleHome: React.FC<TitleProps> = ({ primaryTitleText, primaryColorText, secondaryTitleText, secondaryColorText, paragraphText }) => {
+const TitleHome: React.FC<HomeProps> = ({ primaryTitleText, primaryColorText, secondaryTitleText, secondaryColorText, paragraphText }) => {
     return (
         <>
             <h1>

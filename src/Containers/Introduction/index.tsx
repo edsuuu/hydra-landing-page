@@ -5,24 +5,7 @@ import Button from '../../Components/Button';
 import TitleComponent from '../../Components/TitleComponent';
 import CoverImage from '../../Components/CoverImage';
 import AboutComponent from '../../Components/AboutComponent';
-
-interface TitleProps {
-    title: string;
-    subTitle: string;
-    imgArrow: string;
-    paragraph: string;
-}
-
-interface ImageProps {
-    alt: string;
-    url: string;
-}
-
-interface AboutProps {
-    title: string;
-    subTitle: string;
-    paragraph: string;
-}
+import { AboutProps, CoverProps, TitleProps } from '../../utils/interfaces';
 
 const titleObj: TitleProps[] = [
     {
@@ -34,7 +17,7 @@ const titleObj: TitleProps[] = [
     },
 ];
 
-const imageObj: ImageProps[] = [
+const imageObj: CoverProps[] = [
     {
         alt: 'vrImg2',
         url: vrImg2,
@@ -52,7 +35,7 @@ const aboutObj: AboutProps[] = [
 
 export default function Introduction() {
     const title: TitleProps = titleObj[0];
-    const image: ImageProps = imageObj[0];
+    const image: CoverProps = imageObj[0];
     const about: AboutProps = aboutObj[0];
 
     return (

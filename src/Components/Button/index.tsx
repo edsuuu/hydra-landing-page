@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface ButtonProps {
-    text: string;
-    onClick?: () => void;
-    primary: boolean;
-}
+import { ButtonProps } from '../../utils/interfaces';
 
 const ButtonComponent = styled.button<{ $primary: boolean }>`
     background: ${(props) => (props.$primary ? 'transparent' : 'linear-gradient(to right, #8176AF, #C0B7E8)')};
     color: ${(props) => (props.$primary ? 'white' : '#302C42')};
-    border: ${(props) => (props.$primary ? '0.2rem solid white' : 'none')};;
+    border: ${(props) => (props.$primary ? '0.2rem solid white' : 'none')};
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -35,4 +31,3 @@ const Button: React.FC<ButtonProps> = ({ text, primary, onClick }) => {
 };
 
 export default Button;
-

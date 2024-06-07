@@ -4,30 +4,16 @@ import imgHomePage from '../../assets/vr-img-1.png';
 import TitleHome from '../../Components/TitleHome';
 import Button from '../../Components/Button';
 import ContactPageHome from '../../Components/ContactHome';
+import { CoverProps, HomeProps } from '../../utils/interfaces';
 
-interface ImageProps {
-    id: number;
-    imageName: string;
-    url: string;
-}
-
-interface TitleProps {
-    primaryTitleText: string;
-    primaryColorText: string;
-    secondaryTitleText: string;
-    secondaryColorText: string;
-    paragraphText: string;
-}
-
-const images: ImageProps[] = [
+const images: CoverProps[] = [
     {
-        id: 1,
-        imageName: 'vrImage',
+        alt: 'vrImage',
         url: imgHomePage,
     },
 ];
 
-const titleObj: TitleProps[] = [
+const titleObj: HomeProps[] = [
     {
         primaryColorText: 'Dive',
         primaryTitleText: 'Into The Depths',
@@ -38,8 +24,8 @@ const titleObj: TitleProps[] = [
 ];
 
 const Home: React.FC = () => {
-    const firstImage: ImageProps = images[0];
-    const title: TitleProps = titleObj[0];
+    const firstImage: CoverProps = images[0];
+    const title: HomeProps = titleObj[0];
 
     return (
         <Container>
@@ -59,7 +45,7 @@ const Home: React.FC = () => {
                     </div>
                 </Texts>
                 <ImageCover>
-                    <CoverImage url={firstImage.url} alt={firstImage.imageName} />
+                    <CoverImage url={firstImage.url} alt={firstImage.alt} />
                 </ImageCover>
             </ConteudoMain>
 

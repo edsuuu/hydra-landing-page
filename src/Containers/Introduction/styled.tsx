@@ -63,7 +63,6 @@ export const IntroductionAbout = styled.div`
     justify-content: space-between;
     div:nth-child(1) {
         img {
-            margin: 0px 20px;
             max-width: 480px;
             width: 100%;
             border-radius: 45% 15%;

@@ -9,11 +9,13 @@ export const Container = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
+        .imgArrow {
+            display: none;
+        }
     }
 `;
 
-export const Left = styled.div`
-`;
+export const Left = styled.div``;
 
 export const SectionOne = styled.div`
     color: white;
@@ -22,7 +24,6 @@ export const SectionOne = styled.div`
     div:nth-child(1) {
         h1 {
             padding: 10px 0px;
-
             font-size: 2.6rem;
         }
     }
@@ -38,6 +39,15 @@ export const SectionOne = styled.div`
         }
         img {
             width: 200px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        div:nth-child(1) {
+            h1 {
+                padding: 10px 0px;
+                font-size: 1.6rem;
+            }
         }
     }
 `;

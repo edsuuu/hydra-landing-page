@@ -1,8 +1,8 @@
-import { Buttons, Container, SocialFooter } from './styled';
+import { Buttons, Container, Content, SocialFooter } from './styled';
 import Button from '../../Components/Button';
 import logoVetor from '../../assets/logo-vetor.png';
 import lineVetor from '../../assets/line-vetor.png';
-// import lineLong from '../../assets/line-long.png';
+import lineLong from '../../assets/line-long.png';
 import facebook from '../../assets/facebook.png';
 import twitter from '../../assets/twitter.png';
 import linkedin from '../../assets/linkedin.png';
@@ -33,28 +33,28 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <div>
-            <Container>
+        <Container>
+            <Content>
                 <div>
                     <img src={logoVetor} alt="logoVetor" />
                 </div>
-                <div>
+                <div className="line-vetor">
                     <img src={lineVetor} alt="lineVetor" />
                 </div>
-                <div>
+                <div className="links-array">
                     {links.slice(0, 5).map((link) => (
                         <p key={link.id}> {link.name}</p>
                     ))}
                 </div>
-                <div>
+                <div className="line-vetor">
                     <img src={lineVetor} alt="lineVetor" />
                 </div>
-                <div>
+                <div className="links-array">
                     {links.slice(5).map((link) => (
                         <p key={link.id}> {link.name}</p>
                     ))}
                 </div>
-                <div>
+                <div className="line-vetor">
                     <img src={lineVetor} alt="lineVetor" />
                 </div>
                 <SocialFooter>
@@ -69,14 +69,16 @@ export default function Footer() {
                         ))}
                     </div>
                     <Buttons>
-                        <Button primary={true} text="BUILD YOU WORLD"></Button>
+                        <Button primary={false} text="BUILD YOU WORLD"></Button>
                     </Buttons>
                 </SocialFooter>
-            </Container>
-            <div>{/* <img className="lineLong" src={lineLong} alt="" /> */}</div>
+            </Content>
+            <div className="linelong">
+                <img className="lineLong" src={lineLong} alt="" />
+            </div>
             <div className="credits">
                 <h2>2024 © HYDRA LANDING PAGE - DEVELOPED BY EDSON - ALL RIGHTS RESERVED </h2>
             </div>
-        </div>
+        </Container>
     );
 }

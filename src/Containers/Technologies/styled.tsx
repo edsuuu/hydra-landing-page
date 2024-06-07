@@ -17,6 +17,11 @@ export const Title = styled.div`
     border-radius: 8rem;
     text-align: center;
     border: 1px solid white;
+
+    @media (max-width: 768px) {
+        padding: 4rem 2rem;
+        font-size: 70%;
+    }
 `;
 
 export const Card = styled.div`

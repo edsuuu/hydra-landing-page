@@ -41,7 +41,7 @@ export const ParagraphContainer = styled.div`
     }
 `;
 export const ButtonContainer = styled.div`
-margin-top: 1rem;
+    margin-top: 1rem;
     button {
         font-size: 0.8rem;
         font-weight: 800;

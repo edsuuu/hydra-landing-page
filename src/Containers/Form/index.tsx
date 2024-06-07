@@ -1,41 +1,50 @@
 import Button from '../../Components/Button';
-import { Buttons, FormContainer } from './styled';
+import { FormContact, InputGroup, FormsContactGroup, MensageAndButton, FormMainContact, TitleFormContact, ButtonContainer } from './styled';
 
 export default function Form() {
     return (
-        <FormContainer>
-            <div className="title">
-                <div>
-                    <h1>JOIN HYDRA</h1>
-                </div>
-                <div>line</div>
-                <div>
-                    <p>Let’s Build Your VR Experience</p>
-                </div>
-            </div>
-            <div>
-                <form action="">
-                    <div>
-                        <input type="text" placeholder="First Name" />
-                        <input type="text" placeholder="Last Name" />
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email" />
-                        <input type="number" placeholder="Phone Number" />
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Subject" />
-                    </div>
-                    <div>
-                        <textarea name="mensage" id="mensage">
-                            Tell Us Something...
-                        </textarea>
-                    </div>
-                    <Buttons>
-                        <Button primary={true} text="SEND TO HYDRA " />
-                    </Buttons>
-                </form>
-            </div>
-        </FormContainer>
+        <FormMainContact>
+            <TitleFormContact>
+                <h1>JOIN HYDRA</h1>
+                <p>Let’s Build Your VR Experience</p>
+            </TitleFormContact>
+            <FormContact action="">
+                <InputGroup>
+                    <FormsContactGroup>
+                        <input type="text" placeholder=" " />
+                        <label>First Name</label>
+                    </FormsContactGroup>
+                    <FormsContactGroup>
+                        <input type="email" placeholder=" " />
+                        <label>Last Name</label>
+                    </FormsContactGroup>
+                </InputGroup>
+                <InputGroup>
+                    <FormsContactGroup>
+                        <input type="email" placeholder=" " />
+                        <label>E-Mail</label>
+                    </FormsContactGroup>
+                    <FormsContactGroup>
+                        <input type="text" placeholder=" " />
+                        <label>Phone Number</label>
+                    </FormsContactGroup>
+                </InputGroup>
+                <InputGroup>
+                    <FormsContactGroup>
+                        <input type="text" placeholder=" " />
+                        <label>Subject</label>
+                    </FormsContactGroup>
+                </InputGroup>
+                <MensageAndButton>
+                    <FormsContactGroup>
+                        <textarea placeholder=" "></textarea>
+                        <label>Digite sua mensagem...</label>
+                    </FormsContactGroup>
+                    <ButtonContainer>
+                        <Button primary={false} text="enviar" />
+                    </ButtonContainer>
+                </MensageAndButton>
+            </FormContact>
+        </FormMainContact>
     );
 }

@@ -66,9 +66,8 @@ export const AboutTitle = styled.div`
             .AboutsubTitle {
                 display: none;
             }
-            p{
-            margin-top: 0.5rem;
-
+            p {
+                margin-top: 0.5rem;
             }
         }
         div:nth-child(2) {

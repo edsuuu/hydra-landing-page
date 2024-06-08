@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const FormMainContact = styled.div`
-    margin: 0 auto;
+    margin: 3rem auto;
     max-width: 1200px;
     width: 100%;
     background: radial-gradient(circle, #3c3758, #211e2e);
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
     border-radius: 40px;
 `;
 export const TitleFormContact = styled.div`
@@ -50,11 +50,11 @@ export const FormsContactGroup = styled.div`
         flex: 1 1 100%;
         width: 100%;
         height: 50px;
-        padding: 10px 15px;
+        padding: 15px 20px;
         background: transparent;
         color: white;
-        border: 1px solid #ffffff;
-        border-radius: 4px;
+        border: 3px solid #ffffff;
+        border-radius: 2rem;
         box-sizing: border-box;
 
         &:focus {
@@ -69,6 +69,8 @@ export const FormsContactGroup = styled.div`
         &:not(:placeholder-shown) ~ label {
             top: -8px;
             font-size: 13px;
+            background-color: #211e2e;
+
         }
     }
 
@@ -77,10 +79,10 @@ export const FormsContactGroup = styled.div`
         font-size: 1rem;
         position: absolute;
         pointer-events: none;
-        left: 15px;
+        left: 25px;
         top: 15px;
         padding: 0 5px;
-        border-radius: 10px;
+        border-radius: 5px;
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
@@ -88,15 +90,14 @@ export const FormsContactGroup = styled.div`
 
     textarea {
         font-size: 1.05rem;
-
         width: 100%;
         display: flex;
         flex: 1 1 100%;
-        height: 350px;
+        height: 300px;
         padding: 20px;
         background: transparent;
-        border: 1px solid #ffffff;
-        border-radius: 4px;
+        border: 4px solid #ffffff;
+        border-radius: 2rem;
         box-sizing: border-box;
         resize: none;
         color: white;
@@ -113,6 +114,7 @@ export const FormsContactGroup = styled.div`
         &:not(:placeholder-shown) ~ label {
             top: -8px;
             font-size: 13px;
+            background-color: #211e2e;
         }
     }
 `;

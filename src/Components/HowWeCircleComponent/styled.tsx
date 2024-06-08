@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border: 1px solid white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -9,6 +8,7 @@ export const Container = styled.div`
 `;
 
 export const TitleNumber = styled.div`
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -34,7 +34,6 @@ export const SubText = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 2rem 0;
-
     gap: 1rem;
     div:nth-child(1) {
         img {

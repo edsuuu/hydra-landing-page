@@ -27,7 +27,7 @@ export const TitleContainer = styled.div`
     }
 `;
 export const LineContainer = styled.div`
-    margin: 1rem 0;
+    margin-bottom: 13px;
 
     img {
     }

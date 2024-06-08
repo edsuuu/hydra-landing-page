@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 10rem 0rem 10rem 0rem;
+    gap: 5rem;
+
 `;
 
 export const Title = styled.div`

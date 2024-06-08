@@ -28,7 +28,7 @@ export const SectionOne = styled.div`
         }
     }
     div:nth-child(2) {
-        border: 1px solid white;
+        /* border: 1px solid white; */
         padding: 10px 0px;
         display: flex;
         flex-direction: row;

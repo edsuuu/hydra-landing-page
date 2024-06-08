@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 export const FormMainContact = styled.div`
     margin: 3rem auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
     background: radial-gradient(circle, #3c3758, #211e2e);
-    padding: 4rem 2rem;
+    padding: 4rem 5rem;
     border-radius: 40px;
+
+    @media (max-width: 768px) {
+        padding: 4rem 2rem;
+
+    }
 `;
 export const TitleFormContact = styled.div`
     padding: 10px;
@@ -61,7 +66,7 @@ export const FormsContactGroup = styled.div`
             outline: none;
             ~ label {
                 top: -10px;
-                font-size: 1.1rem;
+                font-size: 13px;
                 background: #211e2e;
             }
         }
@@ -93,7 +98,7 @@ export const FormsContactGroup = styled.div`
         width: 100%;
         display: flex;
         flex: 1 1 100%;
-        height: 300px;
+        height: 270px;
         padding: 20px;
         background: transparent;
         border: 4px solid #ffffff;
@@ -105,8 +110,8 @@ export const FormsContactGroup = styled.div`
         &:focus {
             outline: none;
             ~ label {
-                top: -11px;
-                font-size: 1.1rem;
+                top: -8px;
+                font-size: 13px;
                 background-color: #211e2e;
             }
         }

@@ -38,7 +38,7 @@ export default function Form() {
                 <MensageAndButton>
                     <FormsContactGroup>
                         <textarea placeholder=" "></textarea>
-                        <label>Digite sua mensagem...</label>
+                        <label>Tell Us Something...</label>
                     </FormsContactGroup>
                     <ButtonContainer>
                         <Button primary={false} text="enviar" />

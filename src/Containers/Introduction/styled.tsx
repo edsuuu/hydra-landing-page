@@ -31,6 +31,7 @@ export const Title = styled.div`
 
 export const AboutTitle = styled.div`
     padding-top: 40px;
+    padding-left: 20px;
     font-family: 'Montserrat', sans-serif;
     color: white;
     width: 50%;
@@ -38,7 +39,7 @@ export const AboutTitle = styled.div`
         h1 {
             font-size: 3rem;
         }
-        .subTitle {
+        .AboutsubTitle {
             font-weight: 200;
             margin-top: 0.5rem;
             font-size: 1.6rem;
@@ -53,6 +54,29 @@ export const AboutTitle = styled.div`
         margin-top: 2rem;
         button {
             width: 200px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-left: 0px;
+        width: 100%;
+
+        div:nth-child(1) {
+            .AboutTitle,
+            .AboutsubTitle {
+                display: none;
+            }
+            p{
+            margin-top: 0.5rem;
+
+            }
+        }
+        div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            button {
+                width: 80%;
+            }
         }
     }
 `;
@@ -71,29 +95,7 @@ export const IntroductionAbout = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-    }
-`;
-
-export const Buttons = styled.div`
-    button {
-        font-weight: bold;
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        width: auto;
-
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        cursor: pointer;
-    }
-
-    button:nth-child(1) {
-        border: none;
-        color: #302c42;
-        background: linear-gradient(to right, #8176af, #c0b7e8);
-        transition: 0.3s ease-in;
-
-        &:hover {
-            background: #ffffff;
-        }
+        justify-content: center;
+        align-items: center;
     }
 `;

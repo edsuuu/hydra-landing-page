@@ -6,7 +6,7 @@ export const Title = styled.div`
     width: 100%;
     font-family: 'MontSerrat', sans-serif;
     color: white;
-    background-image: url('/src/assets/pexels.png');
+    background-image: url('../../assets/pexels.png');
     background-position: center center;
     background-repeat: repeat-x;
     background-size: auto;

@@ -1,4 +1,4 @@
-import { Buttons, Container, Content, SocialFooter } from './styled';
+import { Buttons, Container, Content, SocialFooter, LinkArrays, Credits } from './styled';
 import Button from '../../Components/Button';
 import logoVetor from '../../assets/logo-vetor.png';
 import lineVetor from '../../assets/line-vetor.png';
@@ -9,6 +9,7 @@ import linkedin from '../../assets/linkedin.png';
 import youtube from '../../assets/youtube.png';
 import instagram from '../../assets/instagram.png';
 import pinterest from '../../assets/pinterest.png';
+import { Link } from 'react-router-dom';
 
 const links = [
     { id: 1, name: 'About', to: '#' },
@@ -41,19 +42,23 @@ export default function Footer() {
                 <div className="line-vetor">
                     <img src={lineVetor} alt="lineVetor" />
                 </div>
-                <div className="links-array">
+                <LinkArrays className="links-array">
                     {links.slice(0, 5).map((link) => (
-                        <p key={link.id}> {link.name}</p>
+                        <Link key={link.id} to={link.to}>
+                            {link.name}
+                        </Link>
                     ))}
-                </div>
+                </LinkArrays>
                 <div className="line-vetor">
                     <img src={lineVetor} alt="lineVetor" />
                 </div>
-                <div className="links-array">
+                <LinkArrays className="links-array">
                     {links.slice(5).map((link) => (
-                        <p key={link.id}> {link.name}</p>
+                        <Link key={link.id} to={link.to}>
+                            {link.name}
+                        </Link>
                     ))}
-                </div>
+                </LinkArrays>
                 <div className="line-vetor">
                     <img src={lineVetor} alt="lineVetor" />
                 </div>
@@ -63,9 +68,9 @@ export default function Footer() {
                     </div>
                     <div>
                         {socialLinks.map((socialLink) => (
-                            <a key={socialLink.id} href={socialLink.to} target="_blank" rel="noreferrer">
+                            <Link key={socialLink.id} to={socialLink.to}>
                                 <img src={socialLink.image} alt={socialLink.imageAlt} />
-                            </a>
+                            </Link>
                         ))}
                     </div>
                     <Buttons>
@@ -76,9 +81,9 @@ export default function Footer() {
             <div className="linelong">
                 <img className="lineLong" src={lineLong} alt="" />
             </div>
-            <div className="credits">
-                <h2>2024 © HYDRA LANDING PAGE - DEVELOPED BY EDSON - ALL RIGHTS RESERVED </h2>
-            </div>
+            <Credits>
+                <h5>2024 © HYDRA LANDING PAGE - DEVELOPED BY EDSON - ALL RIGHTS RESERVED </h5>
+            </Credits>
         </Container>
     );
 }

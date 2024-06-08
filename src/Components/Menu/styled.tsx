@@ -7,7 +7,7 @@ export const Navbar = styled.nav`
     justify-content: space-between;
     border: 1px solid black;
     gap: 10px;
-    padding: 1.8rem 2rem;
+    padding: 1rem 2rem;
     @media (max-width: 1000px) {
         flex-wrap: wrap;
     }

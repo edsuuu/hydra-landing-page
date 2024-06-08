@@ -9,7 +9,10 @@ export const Container = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-        .imgArrow {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .titleComponent-paragraph {
             display: none;
         }
     }
@@ -48,6 +51,15 @@ export const SectionOne = styled.div`
                 padding: 10px 0px;
                 font-size: 1.6rem;
             }
+        }
+        div:nth-child(2) {
+            p {
+                width: 100%;
+                align-items: center;
+            }
+        }
+        .imgArrow {
+            display: none;
         }
     }
 `;

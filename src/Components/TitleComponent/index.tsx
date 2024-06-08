@@ -11,10 +11,10 @@ const TitleComponent: React.FC<TitleProps> = ({ title, subTitle, imgArrow, parag
                 </div>
                 <div>
                     <p>{subTitle}</p>
-                    <img className='imgArrow' src={imgArrow} alt={title} />
+                    <img className="imgArrow" src={imgArrow} alt={title} />
                 </div>
             </SectionOne>
-            <SectionTwo>
+            <SectionTwo className='titleComponent-paragraph'>
                 <p>{paragraph}</p>
             </SectionTwo>
         </Container>

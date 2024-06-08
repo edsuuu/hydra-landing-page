@@ -6,6 +6,8 @@ export const Title = styled.div`
     width: 100%;
     font-family: 'MontSerrat', sans-serif;
     color: white;
+    //gambiarra do background
+    background-color: #5c5c5c4e;
     background-image: url('../../assets/pexels.png');
     background-position: center center;
     background-repeat: repeat-x;

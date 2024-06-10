@@ -3,31 +3,29 @@ import unity from '../../assets/unity.svg';
 import oculus from '../../assets/oculus.svg';
 import vive from '../../assets/vive.svg';
 import { Card, Container, Title } from './styled';
+import { CoverProps } from '../../utils/interfaces';
+import CoverImage from '../../Components/CoverImage';
+
+const empress: CoverProps[] = [
+    {
+        url: unreal,
+        alt: 'UNREAL',
+    },
+    {
+        url: unity,
+        alt: 'UNITY',
+    },
+    {
+        url: oculus,
+        alt: 'OCULUS',
+    },
+    {
+        url: vive,
+        alt: 'VIVE',
+    },
+];
 
 export default function Technologies() {
-    const empress = [
-        {
-            id: 1,
-            image: unreal,
-            imageAlt: 'UNREAL',
-        },
-        {
-            id: 2,
-            image: unity,
-            imageAlt: 'UNITY',
-        },
-        {
-            id: 3,
-            image: oculus,
-            imageAlt: 'OCULUS',
-        },
-        {
-            id: 4,
-            image: vive,
-            imageAlt: 'VIVE',
-        },
-    ];
-
     return (
         <Container>
             <Title>
@@ -35,9 +33,9 @@ export default function Technologies() {
                 <p>USED BY HYDRA VR</p>
             </Title>
             <Card>
-                {empress.map((item) => (
-                    <div key={item.id}>
-                        <img src={item.image} alt={item.imageAlt} />
+                {empress.map((item, index) => (
+                    <div key={index}>
+                        <CoverImage url={item.url} alt={item.alt} />
                     </div>
                 ))}
             </Card>

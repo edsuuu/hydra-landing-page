@@ -4,6 +4,8 @@ import arrow from '../../assets/arrow-little.png';
 import TitleComponent from '../../Components/TitleComponent';
 import { CardProps, CoverProps, TitleProps } from '../../utils/interfaces';
 import HowWeCircleComponent from '../../Components/HowWeCircleComponent';
+import { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const imageObj: CoverProps[] = [
     {
@@ -33,13 +35,45 @@ export default function HowWeBuild(): JSX.Element {
     const title: TitleProps = titleObj[0];
     const arrow: CoverProps = imageObj[0];
 
+    const [slidesPerView, setslidesPerView] = useState(1);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1120) {
+                setslidesPerView(4);
+            } else if (window.innerWidth >= 860) {
+                setslidesPerView(3);
+            } else if (window.innerWidth >= 730) {
+                setslidesPerView(2);
+            } else {
+                setslidesPerView(1);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <Container>
             <TitleComponent title={title.title} subTitle={title.subTitle} paragraph={title.paragraph} imgArrow={title.imgArrow} />
             <CardContainer>
-                {cardBuild.map((item, index) => (
+                {/* {cardBuild.map((item, index) => (
                     <HowWeCircleComponent key={index} title={item.title} textOne={item.textOne} textTwo={item.textTwo} url={arrow.url} alt={arrow.alt} />
-                ))}
+                ))} */}
+
+                <Swiper slidesPerView={slidesPerView} navigation>
+                    {cardBuild.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <HowWeCircleComponent key={index} title={item.title} textOne={item.textOne} textTwo={item.textTwo} url={arrow.url} alt={arrow.alt} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </CardContainer>
         </Container>
     );

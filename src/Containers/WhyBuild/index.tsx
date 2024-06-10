@@ -88,7 +88,7 @@ export default function WhyBuild() {
         <Container>
             <TitleComponent title={title.title} subTitle={title.subTitle} paragraph={title.paragraph} imgArrow={title.imgArrow} />
             <>
-                <Swiper slidesPerView={slidesPerView} pagination={{ clickable: true }} navigation>
+                <Swiper slidesPerView={slidesPerView}  navigation>
                     {card.map((item, index) => (
                         <SwiperSlide key={index}>
                             <CardBuildComponent title={item.name} image={item.image} imageAlt={item.imageAlt} url2={line.url} alt2={line.alt} paragraph={item.paragraph} />

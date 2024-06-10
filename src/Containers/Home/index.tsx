@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                                 {index < contactSlice - 1 && <img src={lineVertical} alt="lineVertical" />}
                             </>
                         ) : (
-                            <Swiper slidesPerView={contactPerView} pagination={{ clickable: true }} navigation>
+                            <Swiper slidesPerView={contactPerView} navigation>
                                 {contactObj.map((contact, index) => (
                                     <SwiperSlide key={index}>
                                         <BoxIntroductionContactHome icon={contact.icon} altIcon={contact.altIcon} title={contact.title} text={contact.text} />

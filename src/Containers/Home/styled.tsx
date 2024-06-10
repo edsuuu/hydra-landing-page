@@ -149,3 +149,35 @@ export const ImageCover = styled.div`
         }
     }
 `;
+
+
+export const IntroductionContactHome = styled.div`
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* gap: 1rem; */
+    padding: 1rem 0rem;
+    background: radial-gradient(circle, #3a3456, #211e2e);
+    border-radius: 5rem;
+
+    @media (max-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+
+        .line {
+            display: none;
+        }
+        .emailImg {
+            display: none;
+        }
+        .phoneCall {
+            display: none;
+        }
+        .location {
+            /* display: none; */
+        }
+    }
+`;

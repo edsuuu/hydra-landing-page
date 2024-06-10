@@ -52,3 +52,11 @@ export interface LineObjProps {
     url: string,
     alt: string
 }
+
+
+export interface BoxIntroductionContactHomeProps {
+    icon: string;
+    altIcon: string;
+    title: string;
+    text: string;
+}

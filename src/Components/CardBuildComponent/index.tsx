@@ -21,7 +21,7 @@ const CardBuildComponent: React.FC<CombinedProps> = ({ title, paragraph, image, 
                 <p>{paragraph}</p>
             </ParagraphContainer>
             <ButtonContainer>
-                <Button primary={true} text="TRY IT NOW" />
+                <Button primary={false} text="TRY IT NOW" />
             </ButtonContainer>
         </CardContainer>
     );

@@ -12,6 +12,7 @@ export const Title = styled.div`
     background-position: center center;
     background-repeat: repeat-x;
     background-size: auto;
+    object-fit: cover;
     /* padding: 6rem 8rem; */
     height: 100%;
     min-height: 300px;

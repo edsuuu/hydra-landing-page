@@ -6,12 +6,10 @@ export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 2rem;
     color: white;
-
-    @media (max-width: 650px) {
-    }
+    margin: 10px;
 `;
 
 export const ImageContainer = styled.div`

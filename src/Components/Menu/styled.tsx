@@ -5,7 +5,6 @@ export const Navbar = styled.nav`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
     gap: 10px;
     padding: 1rem 2rem;
     @media (max-width: 1000px) {
